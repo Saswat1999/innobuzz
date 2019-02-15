@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $sql = "SELECT stationname, cityname, location, flag FROM rawdata";
 
 if ($conn->query($sql) === TRUE) {
-	include updatedata.php;
+	include 'updatedata.php';
     echo "Record updated successfully";
 } else {
     echo "Error updating record: " . $conn->error;
