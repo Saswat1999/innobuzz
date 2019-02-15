@@ -14,7 +14,8 @@ if ($conn->connect_error) {
 $sql = "UPDATE rawdata SET flag='$flag' WHERE location='$point'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "	data ";
+    include 'insertdetect.php';
+    echo " ";
 } else {
     echo "Error updating record: " . $conn->error;
 }
